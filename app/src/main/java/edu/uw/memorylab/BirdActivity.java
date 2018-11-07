@@ -24,6 +24,21 @@ public class BirdActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        ImageView birdView = (ImageView)findViewById(R.id.imgBird);
+        birdView.setImageDrawable(null);
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
         /* Set up image */
         Drawable image = ContextCompat.getDrawable(this, R.drawable.hummingbird); //get the drawable resource
         ImageView birdView = (ImageView)findViewById(R.id.imgBird);
